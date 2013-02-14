@@ -4,3 +4,6 @@ Revision history for Perl extension Net::SMTPS.
 	- original version; created by h2xs 1.23 with options
 		-AXn Net::SMTPS
 
+0.02  Thu Feb 15 01:20:07 2013
+	- add README
+

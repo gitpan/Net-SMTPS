@@ -8,7 +8,7 @@ package Net::SMTPS;
 
 use vars qw ( $VERSION @ISA );
 
-$VERSION = "0.01";
+$VERSION = "0.02";
 
 use base qw ( Net::SMTP );
 use Net::Cmd;  # import CMD_OK, CMD_MORE, ...
