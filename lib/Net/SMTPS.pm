@@ -8,7 +8,7 @@ package Net::SMTPS;
 
 use vars qw ( $VERSION @ISA );
 
-$VERSION = "0.02";
+$VERSION = "0.03";
 
 use base qw ( Net::SMTP );
 use Net::Cmd;  # import CMD_OK, CMD_MORE, ...
@@ -41,6 +41,9 @@ sub new {
 
   my $hosts = defined $host ? $host : $NetConfig{smtp_hosts};
   my $obj;
+
+  # eliminate IO::Socket::SSL from @ISA for multiple call of new.
+  @ISA = grep { !/IO::Socket::SSL/ } @ISA;
 
   my $h;
   foreach $h (@{ref($hosts) ? $hosts : [$hosts]}) {
@@ -240,7 +243,7 @@ L<Authen::SASL>
 
 =head1 AUTHOR
 
-Tomo.M <tomo@c-wind.com>
+Tomo.M <tomo at cpan.org>
 
 =head1 COPYRIGHT
 
