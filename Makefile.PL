@@ -8,7 +8,7 @@ WriteMakefile(
     PREREQ_PM         => {
 			'Net::SMTP'	=> 2.0,
 			'IO::Socket::SSL' => 1.0,
-			'Authen::SASL' => 2.15,
+			'Authen::SASL' => 2.0,
 			},
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/Net/SMTPS.pm', # retrieve abstract from module

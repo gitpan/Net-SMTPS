@@ -10,3 +10,7 @@ Revision history for Perl extension Net::SMTPS.
 0.03  Thu Mar 25 18:00:00 2013
 	- fix new() for multiple call
 
+0.04  Thu Oct 24 18:15:00 2014
+	- fix new() for Ticket #99743 "problem with ipv6/v4 autodetection on win32 ...
+	   (thanks, <alexz .. opmantek.com>)
+
